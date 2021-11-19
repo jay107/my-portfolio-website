@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    height: 60px;
+}
+
+nav .logo{
+    text-decoration: none;
+    margin: 60px;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    line-height: 60px;
+    text-align: center;
+}
+
+nav ul{
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    display: inline-block;
+    text-align: center;
+    margin: 0 30px;
+    line-height: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+    padding: 5px 15px;
+    transition: all 0.3s linear;
+    font-size: 20px;
+}
+
+nav ul li a:hover , nav ul li a.active{
+    border-bottom: 1px solid black;
+    color: azure;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background: url("./images/5651990.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-div{
+  margin-top: 15%;
+  text-align: center;
+}
+
+.header-div h1, .header-div p{
+    color: white;
+    text-transform: capitalize;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.header-div p{
+    width: 200px;
+   margin: 30px auto;
+   border: 1px solid white;
+   text-align: center;
+   padding: 10px auto;
+    white-space: nowrap;
+}
+
+.header-div .cv-link{
+    color: white;
+    margin: 0 10px;
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s linear;
+    border-radius: 25px;
+}
+
+.header-div .cv-link:hover{
+    border: 1px solid black;
+    color: black;
+}
+
+.bar-icon{
+    font-size: 25px;
+    color: white;
+    float: right;
+    display: none;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 823px){
+  
+    .bar-icon{
+        display: block;
+        margin: 10px 50px;
+        font-size: 30px;
+    }
+    nav ul{
+        width: 100%;
+        z-index: 2;
+        background: white;
+        position: fixed;
+        left: -100%;
+        justify-content: end;
+        transition: all 0.3s ease;
+    }
+    nav ul li{
+        display: block;
+        text-align: end;
+    }
+    nav ul li a{
+        color: black;
+        border: 1px solid transparent;
+        padding: 10px 20px;
+    }
+    nav ul li a:hover, nav ul li a.active{
+        border-bottom: 1px solid transparent;
+        color: black;
+    }
+    nav ul.show{
+        left: -75%;
+    }
+    .bar-icon i.active::before{
+        content: "\f00d";
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .header-div{
+        margin-top: 20%;
+    } 
+}
+@media only screen and (max-width: 450px){
+    .header-div{
+        margin-top: 25%;
+    }
+   
+}
+
+
+
+/*     projects section styling     */
+
+.project-section{
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.project-section .heading h3{
+    text-align: center;
+    margin-bottom: 30px !important;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.element{
+    display: grid;
+    grid-template-columns: repeat(3, 35%);
+}
+
+.element-item{
+    margin: 20px;
+    margin-left: 20px;
+}
+
+.element img{
+    width: 250px;
+    transition: all 0.5s linear;
+}
+
+.element .img img:hover{
+    background: linear-gradient(to top, transparent 0%, black 100%) !important;
+}
+
+.element-item .overlay-text{
+    margin-left: 5%;
+}
+
+.overlay-text h4{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.overlay-text p{
+    font-size: 15px;
+}
+
+/*            contact section              */
+
+.contact-section{
+    margin-top: 50px;
+    color: black;
+    padding: 20px;
+}
+
+.contact-section .contact h3, .contact-form h3{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.contact-form h3{
+    border-top: 2px solid transparent;
+    padding-top: 20px;
+}
+
+.contact p{
+    text-align: left;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.contact p span{
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.contact p span a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact-form p{
+    padding: 10px;
+}
+
+.contact-form input{
+    margin-left: 15px;
+    width: 40%;
+    outline: none;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.contact-form textarea{
+    padding: 2px;
+}
+
+.contact-form .send-button{
+   background: transparent;
+   padding: 5px 7px;
+   outline: none;
+   border-radius: 20px;
+   margin: 20px 80px;
+}
+
+footer{
+    color: white;
+    background: black;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.footer p{
+    text-align: center;
+    padding-top: 30px;
+    width: 500px;
+    margin: auto;
+    line-height: 10px;
+}
+
+
+
+.footer .links{
+    text-align: center;
+    margin: auto;
+    padding: 10px 0 5px 0;
+    color: white;
+}
+
+.footer a .fab{
+    padding: 0 5px;
+    color: white;
+    font-size: large;
+}
+
+@media only screen and (max-width: 878px) {
+    .element-item img{
+       width: 99%;
+    }
+    .contact, .contact-form{
+        width: 100%;
+    }
+    .contact-form h3{
+        border-top: 2px solid black;
+        padding-top: 20px;
+    }
+    .element{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media only screen and (max-width: 400px){
+    
+    .element{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    } 
+}
+
+
+/* teams section editing */
+
+.teams h2{
+    text-align: center;
+    margin: 30px auto;
+    width: 200px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.teams .carousel .card{
+    background: rgb(214, 214, 214);
+    text-align: center;
+    padding: 25px 35px;
+    margin: 0 10px;
+    transition: all 0.3s linear;
+}
+
+.teams .carousel .card:hover{
+    background: rgb(133, 132, 132);
+}
+
+.teams .card .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teams .card .box img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.teams .card h3{
+    padding-top: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.teams .card p{
+    padding-top: 10px;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    background: rgb(126, 123, 123) !important;
+    border: 1px solid black !important;
+    transition: all 0.1s linear;
+}
+
+.owl-dot:active{
+    width: 25px;
+    border-radius: 14px;
+}
+
+.owl-dot:active, .owl-dot:hover{
+    background: black !important;
+}
+
+.back-image-parallax{
+    height: 200px;
+    background: url("./images/photo-1475257026007-0753d5429e10.jpg");
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
